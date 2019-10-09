@@ -1,0 +1,98 @@
+{
+  "name": "foodsharing",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "@react-native-community/netinfo": "^4.3.0",
+    "@react-native-community/push-notification-ios": "^1.0.2",
+    "eslint-plugin-mocha": "^6.1.1",
+    "geokdbush": "^1.1.0",
+    "html-entities": "^1.2.1",
+    "i18n-js": "^3.3.0",
+    "kdbush": "^3.0.0",
+    "lodash.memoize": "^4.1.2",
+    "mocha": "^6.2.1",
+    "moment": "^2.24.0",
+    "react": "16.9.0",
+    "react-dom": "^16.10.1",
+    "react-native": "0.61.1",
+    "react-native-android-badge": "git+https://github.com/rastapasta/react-native-android-badge",
+    "react-native-background-fetch": "^2.7.0",
+    "react-native-camera": "^3.6.0",
+    "react-native-cheerio": "^1.0.0-rc.4",
+    "react-native-cookies": "^3.3.0",
+    "react-native-device-info": "^3.1.4",
+    "react-native-easy-toast": "^1.2.0",
+    "react-native-elements": "^1.2.3",
+    "react-native-fast-image": "^7.0.2",
+    "react-native-hyperlink": "^0.0.16",
+    "react-native-iphone-x-helper": "^1.2.1",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-native-keychain": "^4.0.1",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-localize": "^1.2.1",
+    "react-native-maps": "^0.25.0",
+    "react-native-maps-super-cluster": "^1.6.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-open-maps": "^0.3.4",
+    "react-native-permissions": "^2.0.1",
+    "react-native-phone-call": "^1.0.9",
+    "react-native-push-notification": "^3.1.9",
+    "react-native-router-flux": "^4.0.6",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.1.1",
+    "react-redux-form": "^1.16.14",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.6",
+    "redux-middleware-oneshot": "^0.1.1",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.1",
+    "redux-thunk": "^2.3.0",
+    "rn-fetch-blob": "^0.11.2",
+    "socket.io-client": "2.1.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@types/react-native": "^0.60.17",
+    "babel-jest": "^24.9.0",
+    "custom-env": "^1.0.2",
+    "detox": "^14.4.1",
+    "eslint": "^6.5.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "test-runner": "mocha",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/foodsharing.app",
+        "build": "xcodebuild -workspace ios/foodsharing.xcworkspace -scheme foodsharing -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone SE"
+      },
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/foodsharing.app",
+        "build": "xcodebuild -workspace ios/foodsharing.xcworkspace -scheme foodsharing -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone SE"
+      }
+    }
+  }
+}
